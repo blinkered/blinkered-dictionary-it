@@ -9,7 +9,8 @@
  * it is Wikipedia text wearing a Leipzig label: including it would corroborate `wiki:it` while
  * looking like a fourth family. That is the exact failure the three-families rule is for.
  */
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { createReadStream, existsSync, readFileSync, readdirSync } from 'node:fs'
+import { createInterface } from 'node:readline'
 import {
   fileDocuments,
   fineweb2Documents,
@@ -25,6 +26,20 @@ import {
 export const LANGUAGE = "it";
 
 const CACHE = new URL(".cache/raw/", import.meta.url).pathname;
+
+/** A Leipzig package, with its sentence-to-URL index resolved up front. */
+function leipzig(pkg) {
+  const base = `${CACHE}${pkg}/${pkg}`
+  const locators = leipzigLocators(
+    readFileSync(`${base}-inv_so.txt`, 'utf8'),
+    readFileSync(`${base}-sources.txt`, 'utf8'),
+  )
+  const lines = createInterface({
+    input: createReadStream(`${base}-sentences.txt`),
+    crlfDelay: Infinity,
+  })
+  return leipzigSentences(lines, locators)
+}
 
 /** News only. See the note above about the Wikipedia-derived package. */
 const LEIPZIG = ["ita_news_2024_1M", "ita_news_2023_1M", "ita_news_2022_1M"];
