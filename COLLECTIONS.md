@@ -12,16 +12,16 @@ collection rather than reuse its record only has to put the file back where the 
 
 | collection | tokens | what it is | where it came from |
 | --- | ---: | --- | --- |
-| `fw2` | 1,220,628,273 | FineWeb-2 Italian — a web crawl nobody here made | [fineweb2-ita.parquet](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2/resolve/main/data/ita_Latn/train/000_00000.parquet) |
-| `wiki:it` | 698,129,426 | Italian Wikipedia — modern encyclopedic prose | [itwiki.xml.bz2](https://dumps.wikimedia.org/itwiki/latest/itwiki-latest-pages-articles.xml.bz2) |
-| `gut` | 55,516,450 | Project Gutenberg Italian, 1,109 texts | [gutenberg-it](https://www.gutenberg.org/cache/epub/feeds/pg_catalog.csv) |
-| `ia` | 52,725,705 | Internet Archive Italian books — literature, and the register a newspaper never reaches | [archive-it](https://archive.org/search?query=mediatype%3Atexts+AND+language%3A%22Italian%22) |
-| `wikisource:it` | 21,381,763 | Italian Wikisource — same Wikimedia family, so it corroborates rather than counts | [itwikisource.xml.bz2](https://dumps.wikimedia.org/itwikisource/latest/itwikisource-latest-pages-articles.xml.bz2) |
-| `tat` | 4,420,493 | Tatoeba Italian — contemporary and conversational | [ita_sentences.tsv](https://downloads.tatoeba.org/exports/per_language/ita/ita_sentences.tsv.bz2) |
-| `lz:ita_news_2024_1M` | 4,313,266 | Leipzig ita_news_2024_1M — modern news, cited by the page each sentence came from | [ita_news_2024_1M](https://downloads.wortschatz-leipzig.de/corpora/ita_news_2024_1M.tar.gz) |
-| `lz:ita_news_2023_1M` | 4,206,251 | Leipzig ita_news_2023_1M — modern news, cited by the page each sentence came from | [ita_news_2023_1M](https://downloads.wortschatz-leipzig.de/corpora/ita_news_2023_1M.tar.gz) |
-| `lz:ita_news_2022_1M` | 3,998,084 | Leipzig ita_news_2022_1M — modern news, cited by the page each sentence came from | [ita_news_2022_1M](https://downloads.wortschatz-leipzig.de/corpora/ita_news_2022_1M.tar.gz) |
-| `ebible:ita1927` | 510,539 | Riveduta 1927 — a family nothing else here belongs to | [ita1927_vpl.txt](https://ebible.org/Scriptures/ita1927_vpl.zip) |
+| `fw2` | 1,220,628,273 |  | — |
+| `wiki:it` | 698,129,426 |  | — |
+| `ia` | 232,548,224 | Internet Archive Italian books — literature, and the register a newspaper never reaches | [archive-it](https://archive.org/search?query=mediatype%3Atexts+AND+language%3A%22Italian%22) |
+| `gut` | 55,516,450 |  | — |
+| `wikisource:it` | 21,381,763 |  | — |
+| `tat` | 4,420,493 |  | — |
+| `lz:ita_news_2024_1M` | 4,313,266 |  | — |
+| `lz:ita_news_2023_1M` | 4,206,251 |  | — |
+| `lz:ita_news_2022_1M` | 3,998,084 |  | — |
+| `ebible:ita1927` | 510,539 |  | — |
 
 Totals are playable tokens after folding, not bytes. A collection missing from this table was
 never scanned; one present with no link was fetched by hand and its path is given instead.
